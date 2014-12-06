@@ -37,18 +37,6 @@ public class ManageBudgetActivity extends Activity {
         mItemList.setAdapter(mArrayAdapter);
 
         mItemTotal = (TextView) findViewById(R.id.budgetTotal);
-
-//        mItemList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-//                Intent intent = new Intent(getApplicationContext(), ManageBudgetActivity.class);
-//                Budget myBudget = (Budget) mItems.get(position);
-//                intent.putExtra("value", myBudget.getValue());
-//                startActivity(intent);
-//            }
-//        });
-
     }
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (data == null) {
@@ -63,9 +51,6 @@ public class ManageBudgetActivity extends Activity {
             mMyTotal -= value;
             String str = mMyTotal + "";
             mItemTotal.setText(str);
-
-//            mData.add(text);
-//            mDataAdapter.notifyDataSetChanged();
         }
     }
 
