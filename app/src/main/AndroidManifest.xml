@@ -24,6 +24,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.arjungopisetty.trackyourstack.MainActivity" />
         </activity>
+        <activity
+            android:name=".AddNewItemActivity"
+            android:label="@string/title_activity_add_new_item" >
+        </activity>
+        <activity
+            android:name=".MainBudgetActivity"
+            android:label="@string/title_activity_manage_budget" >
+        </activity>
     </application>
 
 </manifest>

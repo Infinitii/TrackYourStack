@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.arjungopisetty.trackyourstack.MainBudgetActivity" >
+    <item android:id="@+id/action_settings"
+          android:title="@string/action_settings"
+          android:showAsAction="never" />
+
+    <item android:id="@+id/addNewItem"
+          android:title="New Budget"
+          android:icon="@drawable/plus"
+          android:showAsAction="always" />
+</menu>

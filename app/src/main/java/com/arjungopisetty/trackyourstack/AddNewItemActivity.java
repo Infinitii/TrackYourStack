@@ -3,35 +3,33 @@ package com.arjungopisetty.trackyourstack;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class AddBudgetActivity extends Activity {
+public class AddNewItemActivity extends Activity {
 
-    private EditText mBudgetValue, mBudgetName;
-    private Button mAddNewBudget;
+    private EditText mItemValue, mItemName;
+    private Button mAddNewItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_budget);
 
-        mBudgetName = (EditText) findViewById(R.id.budgetName);
-        mBudgetValue = (EditText) findViewById(R.id.budgetValue);
+        mItemName = (EditText) findViewById(R.id.budgetName);
+        mItemValue = (EditText) findViewById(R.id.budgetValue);
 
-        mAddNewBudget = (Button) findViewById(R.id.setNewBudget);
-        mAddNewBudget.setOnClickListener(new View.OnClickListener() {
+        mAddNewItem = (Button) findViewById(R.id.setNewBudget);
+        mAddNewItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.putExtra("name", mBudgetName.getText().toString());
-                intent.putExtra("budgetValue", Double.parseDouble(mBudgetValue.getText().toString()));
-                setResult(1, intent);
-                Log.d("finished", "finished");
+                intent.putExtra("item_name", mItemName.getText().toString());
+                intent.putExtra("item_value", Double.parseDouble(mItemValue.getText().toString()));
+                setResult(2, intent);
                 finish();
             }
         });
@@ -56,5 +54,4 @@ public class AddBudgetActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }
