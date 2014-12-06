@@ -32,6 +32,7 @@ public class MainActivity extends Activity {
         mBudgetItems.add(new Budget("hi2", 200));
         mArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, mBudgetItems);
         mBudgetList = (ListView) findViewById(R.id.budgetList);
+        System.out.println("mBudgetList: " + mBudgetList);
         mBudgetList.setAdapter(mArrayAdapter);
 
         mMyTotal = 10000.0;
@@ -42,7 +43,7 @@ public class MainActivity extends Activity {
 
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Intent intent = new Intent(getApplicationContext(), MainBudgetActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ManageBudgetActivity.class);
                 Budget myBudget = (Budget) mBudgetItems.get(position);
                 intent.putExtra("value", myBudget.getValue());
                 startActivity(intent);

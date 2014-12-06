@@ -26,10 +26,12 @@
         </activity>
         <activity
             android:name=".AddNewItemActivity"
+            android:parentActivityName="com.arjungopisetty.trackyourstack.ManageBudgetActivity"
             android:label="@string/title_activity_add_new_item" >
         </activity>
         <activity
-            android:name=".MainBudgetActivity"
+            android:name=".ManageBudgetActivity"
+            android:parentActivityName="com.arjungopisetty.trackyourstack.MainActivity"
             android:label="@string/title_activity_manage_budget" >
         </activity>
     </application>
