@@ -7,20 +7,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class MainActivity extends Activity {
+public class AddBudgetActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView
-                (R.layout.activity_main);
+        setContentView(R.layout.activity_add_budget);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.add_budget, menu);
         return true;
     }
 
@@ -32,10 +31,19 @@ public class MainActivity extends Activity {
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             return true;
-        } else if (id == R.id.addNewBudget) {
-            Intent intent = new Intent(this, AddBudgetActivity.class);
-            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (data == null) {
+            return;
+        }
+
+        if (resultCode == 1) {
+            String text = data.getStringExtra("item");
+//            mData.add(text);
+//            mDataAdapter.notifyDataSetChanged();
+        }
     }
 }
