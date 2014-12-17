@@ -1,7 +1,7 @@
 package com.arjungopisetty.trackyourstack;
 
 /**
- * Created by ArjunGopisetty on 12/6/14.
+ * Created by Hareet on 12/6/2014.
  */
 public class Budget {
 
@@ -19,10 +19,10 @@ public class Budget {
 
     @Override
     public String toString() {
-        return "Budget{" +
-                "mName='" + mName + '\'' +
-                ", mValue=" + mValue +
-                '}';
+        return
+                "Name='" + mName + '\'' +
+                ", Value=" + mValue
+                ;
     }
 
     public void setName(String name) {

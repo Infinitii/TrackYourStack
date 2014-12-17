@@ -28,13 +28,13 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mBudgetItems = new ArrayList<Budget>();
-        mBudgetItems.add(new Budget("hi", 100));
-        mBudgetItems.add(new Budget("hi2", 200));
+        //  mBudgetItems.add(new Budget("hi", 100));
+        //  mBudgetItems.add(new Budget("hi2", 200));
         mArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, mBudgetItems);
         mBudgetList = (ListView) findViewById(R.id.budgetList);
         System.out.println("mBudgetList: " + mBudgetList);
         mBudgetList.setAdapter(mArrayAdapter);
-
+        //**Hardcoded to 10k, change later **
         mMyTotal = 10000.0;
         mGrandTotal = (TextView) findViewById(R.id.grandTotal);
         mGrandTotal.setText(mMyTotal + "");
@@ -46,6 +46,7 @@ public class MainActivity extends Activity {
                 Intent intent = new Intent(getApplicationContext(), ManageBudgetActivity.class);
                 Budget myBudget = (Budget) mBudgetItems.get(position);
                 intent.putExtra("value", myBudget.getValue());
+                setResult(3,intent);
                 startActivity(intent);
             }
         });
@@ -76,7 +77,7 @@ public class MainActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -98,4 +99,3 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 }
-

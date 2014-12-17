@@ -16,17 +16,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"> <!-- Horizontal orientation for the row -->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name:"
-        android:textSize="15sp"
-        android:textStyle="bold" />
-    <EditText
-        android:id="@+id/budgetName"
-        android:hint="Food"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/budgetName"
+            android:hint="Food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 
