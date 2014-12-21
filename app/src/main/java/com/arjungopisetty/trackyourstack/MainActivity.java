@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
             }
         });
     }
-    //Updates the total budget
+    // Updates the total budget
     public void updateTotal(Double aTotal){
         mMyTotal = aTotal;
         String str = mMyTotal + "";
@@ -61,7 +61,7 @@ public class MainActivity extends Activity {
         if (data == null) {
             return;
         }
-        //Grabs the value of the budget to add to the ListView when the "plus" button is clicked on the main activity
+        // Grabs the value of the budget to add to the ListView when the "plus" button is clicked on the main activity
         if (resultCode == 1) {
             String text = data.getStringExtra("name");
             Double value = data.getDoubleExtra("budgetValue", 20);
@@ -77,7 +77,7 @@ public class MainActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -88,7 +88,6 @@ public class MainActivity extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }

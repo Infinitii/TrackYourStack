@@ -82,7 +82,7 @@ public class ManageBudgetActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_add_new_item, menu);
+        getMenuInflater().inflate(R.menu.add_new_item, menu);
         return true;
     }
 
